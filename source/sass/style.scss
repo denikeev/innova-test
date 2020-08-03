@@ -66,6 +66,7 @@
 }
 
 .cards-view__item {
+  position: relative;
   margin-left: 32px;
   &:not(:last-of-type) {
     margin-bottom: 48px;
@@ -80,6 +81,12 @@
   position: relative;
   display: block;
   margin-bottom: 12px;
+  &:hover {
+    .cards-view__info,
+    + .cards-view__actions button  {
+      opacity: 1;
+    }
+  }
 }
 
 .cards-view__img {
@@ -98,8 +105,8 @@
   display: flex;
   flex-direction: column;
   padding: 20px 16px;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
-  opacity: 1;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.80) 100%);
+  opacity: 0;
   transition: opacity .3s ease;
 }
 
@@ -112,7 +119,7 @@
   height: 80px;
   background-color: rgba(255, 255, 255, 0.35);
   border-radius: 50%;
-  &::after {
+  &::after {    
     content: '';
     position: absolute;
     top: calc(50% - 20px);
@@ -139,6 +146,12 @@
     padding: 6px;
     background-color: transparent;
     border: 0;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -146,18 +159,54 @@
   position: absolute;
   top: 16px;
   left: 10px;
+  &:hover {
+    svg {
+      opacity: 1;    
+    }
+  }
+  svg {    
+    opacity: 0.2;
+    transition: opacity 0.1s linear;
+  }
 }
 
 .cards-view__favorites {
   position: absolute;
   top: 16px;
   left: 42px;
+  &:hover {
+    svg {
+      opacity: 1;
+      fill: red;
+    }
+  }
+  svg {
+    fill: white;
+    opacity: 0.2;
+    transition: all 0.1s linear;
+  }
 }
 
 .cards-view__delete-favorites {
   position: absolute;
   top: 16px;
   right: 10px;
+  display: none;
+  &::before {
+    box-sizing: border-box;
+    z-index: 1;
+    content: 'Удалить из избранного';
+    position: absolute;
+    top: -28px;
+    left: -63px;
+    width: 155px;
+    height: 24px;
+    padding: 4px 0;
+    background-color: #666666;
+    font-size: 13px;
+    line-height: 1;
+    color: #d4e4e3;
+  }
 }
 
 .cards-view__buttons {
