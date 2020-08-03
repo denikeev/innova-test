@@ -77,6 +77,7 @@
 }
 
 .cards-view__link {
+  position: relative;
   display: block;
   margin-bottom: 12px;
 }
@@ -86,6 +87,77 @@
   width: 200px;
   height: 280px;
   border-radius: 6px;
+}
+
+.cards-view__info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+
+.cards-view__play {
+  content: '';
+  position: absolute;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 10px);
+    border: 20px solid transparent; border-left: 30px solid #ffffff;
+  }
+}
+
+.cards-view__rating {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  span {
+    font-size: 14px;    
+  }
+}
+
+.cards-view__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: auto;
+  button {
+    padding: 6px;
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+.cards-view__defer {
+  position: absolute;
+  top: 16px;
+  left: 10px;
+}
+
+.cards-view__favorites {
+  position: absolute;
+  top: 16px;
+  left: 42px;
+}
+
+.cards-view__delete-favorites {
+  position: absolute;
+  top: 16px;
+  right: 10px;
 }
 
 .cards-view__buttons {
@@ -172,4 +244,8 @@
   display: flex;
   flex-direction: column;
   padding-left: 12px;
+}
+
+.svg-transform {
+  transform: scaleX(-1) rotate(180deg);
 }
