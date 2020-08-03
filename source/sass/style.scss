@@ -1,0 +1,175 @@
+@import 'variables';
+@import 'common';
+
+
+.main {
+  padding: 0 16px 48px;
+  .side {
+    margin-bottom: 48px;
+  }
+}
+
+.side {
+  display: flex;
+}
+
+.side__toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 70px;
+  height: 50px;
+  font-size: 0;
+  background-color: #222423;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background-color .2s linear;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 17px;
+    width: 36px;
+    height: 2px;
+    background-color: #fff;
+    box-shadow: 0 8px 0 0 #fff, 0 16px 0 0 #fff;
+  }
+}
+
+.side__col2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 50px;
+  text-align: center;
+  b {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+.cards-view h1 {
+  display: none;
+}
+
+.cards-view__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-left: -32px;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-view__item {
+  margin-left: 32px;
+  &:not(:last-of-type) {
+    margin-bottom: 48px;
+  }
+  small {
+    font-size: 14px;
+    color: #727473;
+  }
+}
+
+.cards-view__link {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.cards-view__img {
+  display: block;
+  width: 200px;
+  height: 280px;
+  border-radius: 6px;
+}
+
+.cards-view__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.cards-view__button {
+  position: relative;   
+  display: inline-flex;
+  margin-right: 8px; 
+  padding: 0;  
+  color: #4D4F4E;
+  vertical-align: middle;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 28px;
+    height: 28px;
+  }
+  &:hover {
+    svg {
+      opacity: 0.8;
+    }
+  }
+  svg {
+    opacity: 0.2;
+    transition: opacity 0.2s linear;
+  }
+}
+
+.cards-view__count {
+  font-size: 14px;
+  color: #6a6b6d;
+  vertical-align: middle;
+  cursor: default;
+}
+
+.cards-view__title {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.side-menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  padding: 56px 2px 0;
+  background-color: #222222;
+}
+
+.side-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.side-menu__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.side-menu__button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 18px;
+  color: #F0EEF1;
+}
+
+.side-menu__items {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+}
