@@ -81,6 +81,23 @@
       opacity: 1;
     }
   }
+  &.active {
+    .cards-view__action_delete {
+      display: block;
+    }
+    .cards-view__action_defer {
+      display: none;
+    }
+    .cards-view__action_favorites {
+      top: 16px;
+      left: 10px;
+      opacity: 1;
+      svg {      
+        opacity: 1;  
+        fill: red;
+      }
+    }
+  }
 }
 
 .cards-view__thumbnail {
@@ -136,7 +153,6 @@
     font-size: 14px;    
   }
 }
-
 
 .cards-view__action {
   padding: 6px;

@@ -25,10 +25,14 @@
         <path
           d="M12 4a8 8 0 100 16 8 8 0 000-16zm1.732 7a2.01 2.01 0 00-.732-.732V6a1 1 0 10-2 0v4.268A2 2 0 1013.732 13H16a1 1 0 100-2h-2.268zM12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z" />
       </symbol>
-      <svg id="close" viewBox="0 0 24 24" style="fill: #ffffff;">
+      <symbol id="close" viewBox="0 0 24 24" style="fill: #ffffff;">
         <path
           d="M10.586 12L3.293 4.707a1 1 0 011.414-1.414L12 10.586l7.293-7.293a1 1 0 111.414 1.414L13.414 12l7.293 7.293a1 1 0 01-1.414 1.414L12 13.414l-7.293 7.293a1 1 0 01-1.414-1.414L10.586 12z" />
-      </svg>
+      </symbol>
+      <symbol id="favorites-fill" viewBox="0 0 24 24">
+        <path fill="red"
+          d="M17 2c3.216 0 6 2.598 6 6 0 3.403-3.466 7.908-10.352 13.762a1 1 0 01-1.296 0C4.466 15.908 1 11.402 1 8c0-3.402 2.784-6 6-6 1.73 0 3.396.856 5 2.504C13.604 2.856 15.27 2 17 2z" />
+      </symbol>
     </svg>
   </div>
   <main class="main">
@@ -94,7 +98,6 @@
               <use xlink:href="#close"></use>
             </svg>
           </button>
-          </div>
           <div class="cards-view__buttons">
             <div>
               <button class="cards-view__button" type="button">
@@ -118,19 +121,34 @@
             <small>4 сезона, 8 серий</small>
           </a>
         </li>
-        <li class="cards-view__item">
-          <a class="cards-view__link" href="#">
+        <li class="cards-view__item active">
+          <div class="cards-view__thumbnail">
             <img class="cards-view__img"
               src="https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/637271d5-61b4-4e46-ac83-6d07494c7645/360"
               alt="911 Служба спасения">
-            <div class="cards-view__info">
+            <div class="cards-view__overlay">
               <div class="cards-view__play"></div>
               <div class="cards-view__rating">
                 <span>КП 7.5</span>
                 <span>IMDb: 7.7</span>
               </div>
             </div>
-          </a>
+          </div>
+          <button class="cards-view__action cards-view__action_defer" type="button">
+            <svg width="20" height="20">
+              <use xlink:href="#clock"></use>
+            </svg>
+          </button>
+          <button class="cards-view__action cards-view__action_favorites" type="button">
+            <svg width="20" height="20">
+              <use xlink:href="#favorites-fill"></use>
+            </svg>
+          </button>
+          <button class="cards-view__action cards-view__action_delete" type="button">
+            <svg width="20" height="20">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
           <div class="cards-view__buttons">
             <div>
               <button class="cards-view__button" type="button">
