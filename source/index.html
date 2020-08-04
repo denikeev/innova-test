@@ -33,22 +33,33 @@
         <path fill="red"
           d="M17 2c3.216 0 6 2.598 6 6 0 3.403-3.466 7.908-10.352 13.762a1 1 0 01-1.296 0C4.466 15.908 1 11.402 1 8c0-3.402 2.784-6 6-6 1.73 0 3.396.856 5 2.504C13.604 2.856 15.27 2 17 2z" />
       </symbol>
+      <symbol id="arrow" viewBox="0 0 24 24">
+        <path
+          d="M12 14.243l4.95-4.95a1 1 0 111.414 1.414l-5.657 5.657a1 1 0 01-1.414 0l-5.657-5.657A1 1 0 017.05 9.293l4.95 4.95z" />
+      </symbol>
     </svg>
   </div>
   <main class="main">
-    <aside class="side main__side">
-      <div class="side__col1">
-        <button class="side__toggle" type="button">Открыть меню</button>
+    <div class="container main__cols">
+      <aside class="side main__side">
+        <div class="side__col1">
+          <button class="side__toggle" type="button">Открыть меню</button>
+        </div>
         <div class="side-menu">
           <ul class="side-menu__list">
             <li class="side-menu__item side-menu__item_active">
-              <button class="side-menu__button" type="button">Действия</button>
+              <button class="side-menu__button active" type="button">
+                <span>Действия</span>
+                <svg width="18" height="18">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
               <ul class="side-menu__items">
                 <li>
-                  <a href="#">Просмотры</a>                                    
+                  <a href="#">Просмотры</a>
                 </li>
                 <li>
-                  <a href="#">Избранное</a>
+                  <a class="active" href="#">Избранное</a>
                 </li>
                 <li>
                   <a href="#">Отложенное</a>
@@ -56,359 +67,360 @@
               </ul>
             </li>
             <li class="side-menu__item">
-              <button class="side-menu__button" type="button">Тарифы</button>
+              <button class="side-menu__button" type="button"> 
+                <span>Тарифы</span>
+                <svg width="18" height="18">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
             </li>
             <li class="side-menu__item">
               <a class="side-menu__button" href="#">Настройки</a>
             </li>
           </ul>
         </div>
-      </div>
-      <!-- <div class="side__col2">
-        <b>Избранное</b>
-      </div> -->
-    </aside>
+      </aside>
 
-    <section class="cards-view">
-      <div class="container">
-        <h1>Избранное</h1>
-        <ul class="cards-view__list">
-          <li class="cards-view__item">
-            <div class="cards-view__thumbnail">
-              <img class="cards-view__img"
-                src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/360"
-                alt="13 причин почему">
-              <a href="#" class="cards-view__overlay">
-                <div class="cards-view__play"></div>
-                <div class="cards-view__rating">
-                  <span>КП 7.5</span>
-                  <span>IMDb: 7.7</span>
-                </div>
-            </div>
-            <button class="cards-view__action cards-view__action_defer" type="button">
-              <svg width="20" height="20">
-                <use xlink:href="#clock"></use>
-              </svg>
-            </button>
-            <button class="cards-view__action cards-view__action_favorites" type="button">
-              <svg width="20" height="20">
-                <use xlink:href="#favorites"></use>
-              </svg>
-            </button>
-            <button class="cards-view__action cards-view__action_delete" type="button">
-              <svg width="20" height="20">
-                <use xlink:href="#close"></use>
-              </svg>
-            </button>
-            <div class="cards-view__buttons">
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">25</span>
+      <section class="cards-view">
+        <div class="box">
+          <h1>Избранное</h1>
+          <ul class="cards-view__list">
+            <li class="cards-view__item">
+              <div class="cards-view__thumbnail">
+                <img class="cards-view__img"
+                  src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/360"
+                  alt="13 причин почему">
+                <a href="#" class="cards-view__overlay">
+                  <div class="cards-view__play"></div>
+                  <div class="cards-view__rating">
+                    <span>КП 7.5</span>
+                    <span>IMDb: 7.7</span>
+                  </div>
               </div>
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg class="svg-transform" width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">4</span>
-              </div>
-            </div>
-            <a href="#">
-              <h2 class="cards-view__title">13 причин почему</h2>
-              <small>4 сезона, 8 серий</small>
-            </a>
-          </li>
-          <li class="cards-view__item active">
-            <div class="cards-view__thumbnail">
-              <img class="cards-view__img"
-                src="https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/637271d5-61b4-4e46-ac83-6d07494c7645/360"
-                alt="911 Служба спасения">
-              <a href="#" class="cards-view__overlay">
-                <div class="cards-view__play"></div>
-                <div class="cards-view__rating">
-                  <span>КП 7.5</span>
-                  <span>IMDb: 7.7</span>
+              <button class="cards-view__action cards-view__action_defer" type="button">
+                <svg width="20" height="20">
+                  <use xlink:href="#clock"></use>
+                </svg>
+              </button>
+              <button class="cards-view__action cards-view__action_favorites" type="button">
+                <svg width="20" height="20">
+                  <use xlink:href="#favorites"></use>
+                </svg>
+              </button>
+              <button class="cards-view__action cards-view__action_delete" type="button">
+                <svg width="20" height="20">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <div class="cards-view__buttons">
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">25</span>
                 </div>
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg class="svg-transform" width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">4</span>
+                </div>
+              </div>
+              <a href="#">
+                <h2 class="cards-view__title">13 причин почему</h2>
+                <small>4 сезона, 8 серий</small>
               </a>
-            </div>
-            <button class="cards-view__action cards-view__action_defer" type="button">
-              <svg width="20" height="20">
-                <use xlink:href="#clock"></use>
-              </svg>
-            </button>
-            <button class="cards-view__action cards-view__action_favorites" type="button">
-              <svg width="20" height="20">
-                <use xlink:href="#favorites-fill"></use>
-              </svg>
-            </button>
-            <button class="cards-view__action cards-view__action_delete" type="button">
-              <svg width="20" height="20">
-                <use xlink:href="#close"></use>
-              </svg>
-            </button>
-            <div class="cards-view__buttons">
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">25</span>
+            </li>
+            <li class="cards-view__item active">
+              <div class="cards-view__thumbnail">
+                <img class="cards-view__img"
+                  src="https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/637271d5-61b4-4e46-ac83-6d07494c7645/360"
+                  alt="911 Служба спасения">
+                <a href="#" class="cards-view__overlay">
+                  <div class="cards-view__play"></div>
+                  <div class="cards-view__rating">
+                    <span>КП 7.5</span>
+                    <span>IMDb: 7.7</span>
+                  </div>
+                </a>
               </div>
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg class="svg-transform" width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">4</span>
+              <button class="cards-view__action cards-view__action_defer" type="button">
+                <svg width="20" height="20">
+                  <use xlink:href="#clock"></use>
+                </svg>
+              </button>
+              <button class="cards-view__action cards-view__action_favorites" type="button">
+                <svg width="20" height="20">
+                  <use xlink:href="#favorites-fill"></use>
+                </svg>
+              </button>
+              <button class="cards-view__action cards-view__action_delete" type="button">
+                <svg width="20" height="20">
+                  <use xlink:href="#close"></use>
+                </svg>
+              </button>
+              <div class="cards-view__buttons">
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">25</span>
+                </div>
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg class="svg-transform" width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">4</span>
+                </div>
               </div>
-            </div>
-            <a href="#">
-              <h2 class="cards-view__title">911 Служба спасения</h2>
-              <small>3 сезона, 18 серий</small>
-            </a>
-          </li>
-          <li class="cards-view__item">
-            <a class="cards-view__link" href="#">
-              <img class="cards-view__img"
-                src="https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/4c78b2e3-ffed-4985-bbc2-642952c92f5e/360"
-                alt="Миллион мелочей">
-            </a>
-            <div class="cards-view__buttons">
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">25</span>
+              <a href="#">
+                <h2 class="cards-view__title">911 Служба спасения</h2>
+                <small>3 сезона, 18 серий</small>
+              </a>
+            </li>
+            <li class="cards-view__item">
+              <a class="cards-view__link" href="#">
+                <img class="cards-view__img"
+                  src="https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/4c78b2e3-ffed-4985-bbc2-642952c92f5e/360"
+                  alt="Миллион мелочей">
+              </a>
+              <div class="cards-view__buttons">
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">25</span>
+                </div>
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg class="svg-transform" width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">4</span>
+                </div>
               </div>
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg class="svg-transform" width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">4</span>
+              <a href="#">
+                <h2 class="cards-view__title">Миллион мелочей</h2>
+                <small>2 сезона, 19 серий</small>
+              </a>
+            </li>
+            <li class="cards-view__item">
+              <a class="cards-view__link" href="#">
+                <img class="cards-view__img"
+                  src="https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/4b27e219-a8a5-4d85-9874-57d6016e0837/360"
+                  alt="Мыслить как преступник">
+              </a>
+              <div class="cards-view__buttons">
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">25</span>
+                </div>
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg class="svg-transform" width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">4</span>
+                </div>
               </div>
-            </div>
-            <a href="#">
-              <h2 class="cards-view__title">Миллион мелочей</h2>
-              <small>2 сезона, 19 серий</small>
-            </a>
-          </li>
-          <li class="cards-view__item">
-            <a class="cards-view__link" href="#">
-              <img class="cards-view__img"
-                src="https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/4b27e219-a8a5-4d85-9874-57d6016e0837/360"
-                alt="Мыслить как преступник">
-            </a>
-            <div class="cards-view__buttons">
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">25</span>
+              <a href="#">
+                <h2 class="cards-view__title">Мыслить как преступник</h2>
+                <small>15 сезона, 10 серий</small>
+              </a>
+            </li>
+            <li class="cards-view__item">
+              <a class="cards-view__link" href="#">
+                <img class="cards-view__img"
+                  src="https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/f28c1ea2-47b0-49d5-b11c-9608744f0233/360"
+                  alt="Американская история ужасов">
+              </a>
+              <div class="cards-view__buttons">
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">25</span>
+                </div>
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg class="svg-transform" class="svg-transform" width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">4</span>
+                </div>
               </div>
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg class="svg-transform" width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">4</span>
+              <a href="#">
+                <h2 class="cards-view__title">Американская история ужасов</h2>
+                <small>9 сезона, 9 серий</small>
+              </a>
+            </li>
+            <li class="cards-view__item">
+              <a class="cards-view__link" href="#">
+                <img class="cards-view__img"
+                  src="https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/3d0b4a89-acd9-49ac-a83e-480c18c41baa/360"
+                  alt="Достать ножи">
+              </a>
+              <div class="cards-view__buttons">
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">25</span>
+                </div>
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg class="svg-transform" width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">4</span>
+                </div>
               </div>
-            </div>
-            <a href="#">
-              <h2 class="cards-view__title">Мыслить как преступник</h2>
-              <small>15 сезона, 10 серий</small>
-            </a>
-          </li>
-          <li class="cards-view__item">
-            <a class="cards-view__link" href="#">
-              <img class="cards-view__img"
-                src="https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/f28c1ea2-47b0-49d5-b11c-9608744f0233/360"
-                alt="Американская история ужасов">
-            </a>
-            <div class="cards-view__buttons">
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">25</span>
+              <a href="#">
+                <h2 class="cards-view__title">Достать ножи</h2>
+                <small>15 сезона, 3 серий</small>
+              </a>
+            </li>
+            <li class="cards-view__item">
+              <a class="cards-view__link" href="#">
+                <img class="cards-view__img"
+                  src="https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/5067dbe3-760d-45b6-826d-f22a283d408b/360"
+                  alt="Джокер">
+              </a>
+              <div class="cards-view__buttons">
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">25</span>
+                </div>
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg class="svg-transform" width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">4</span>
+                </div>
               </div>
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg class="svg-transform" class="svg-transform" width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">4</span>
+              <a href="#">
+                <h2 class="cards-view__title">Джокер</h2>
+                <small>1 сезон</small>
+              </a>
+            </li>
+            <li class="cards-view__item">
+              <a class="cards-view__link" href="#">
+                <img class="cards-view__img"
+                  src="https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/4596e8bf-9837-4102-abf7-c454827ade5c/360"
+                  alt="Зверополис">
+              </a>
+              <div class="cards-view__buttons">
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">25</span>
+                </div>
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg class="svg-transform" width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">4</span>
+                </div>
               </div>
-            </div>
-            <a href="#">
-              <h2 class="cards-view__title">Американская история ужасов</h2>
-              <small>9 сезона, 9 серий</small>
-            </a>
-          </li>
-          <li class="cards-view__item">
-            <a class="cards-view__link" href="#">
-              <img class="cards-view__img"
-                src="https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/3d0b4a89-acd9-49ac-a83e-480c18c41baa/360"
-                alt="Достать ножи">
-            </a>
-            <div class="cards-view__buttons">
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">25</span>
+              <a href="#">
+                <h2 class="cards-view__title">Зверополис</h2>
+                <small>2 сезона, 5 серий</small>
+              </a>
+            </li>
+            <li class="cards-view__item">
+              <a class="cards-view__link" href="#">
+                <img class="cards-view__img"
+                  src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/bb8afbd6-c9cd-4631-99e9-3fecf241dbaf/360"
+                  alt="Клаус">
+              </a>
+              <div class="cards-view__buttons">
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">25</span>
+                </div>
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg class="svg-transform" width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">4</span>
+                </div>
               </div>
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg class="svg-transform" width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">4</span>
+              <a href="#">
+                <h2 class="cards-view__title">Клаус</h2>
+                <small>4 сезона, 7 серий</small>
+              </a>
+            </li>
+            <li class="cards-view__item">
+              <a class="cards-view__link" href="#">
+                <img class="cards-view__img"
+                  src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/ff62ce50-347e-4690-87b4-55b7d998223a/360"
+                  alt="Как приручить дракона 3">
+              </a>
+              <div class="cards-view__buttons">
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">25</span>
+                </div>
+                <div>
+                  <button class="cards-view__button" type="button">
+                    <svg class="svg-transform" width="20" height="20">
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </button>
+                  <span class="cards-view__count">4</span>
+                </div>
               </div>
-            </div>
-            <a href="#">
-              <h2 class="cards-view__title">Достать ножи</h2>
-              <small>15 сезона, 3 серий</small>
-            </a>
-          </li>
-          <li class="cards-view__item">
-            <a class="cards-view__link" href="#">
-              <img class="cards-view__img"
-                src="https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/5067dbe3-760d-45b6-826d-f22a283d408b/360"
-                alt="Джокер">
-            </a>
-            <div class="cards-view__buttons">
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">25</span>
-              </div>
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg class="svg-transform" width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">4</span>
-              </div>
-            </div>
-            <a href="#">
-              <h2 class="cards-view__title">Джокер</h2>
-              <small>1 сезон</small>
-            </a>
-          </li>
-          <li class="cards-view__item">
-            <a class="cards-view__link" href="#">
-              <img class="cards-view__img"
-                src="https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/4596e8bf-9837-4102-abf7-c454827ade5c/360"
-                alt="Зверополис">
-            </a>
-            <div class="cards-view__buttons">
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">25</span>
-              </div>
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg class="svg-transform" width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">4</span>
-              </div>
-            </div>
-            <a href="#">
-              <h2 class="cards-view__title">Зверополис</h2>
-              <small>2 сезона, 5 серий</small>
-            </a>
-          </li>
-          <li class="cards-view__item">
-            <a class="cards-view__link" href="#">
-              <img class="cards-view__img"
-                src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/bb8afbd6-c9cd-4631-99e9-3fecf241dbaf/360"
-                alt="Клаус">
-            </a>
-            <div class="cards-view__buttons">
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">25</span>
-              </div>
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg class="svg-transform" width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">4</span>
-              </div>
-            </div>
-            <a href="#">
-              <h2 class="cards-view__title">Клаус</h2>
-              <small>4 сезона, 7 серий</small>
-            </a>
-          </li>
-          <li class="cards-view__item">
-            <a class="cards-view__link" href="#">
-              <img class="cards-view__img"
-                src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/ff62ce50-347e-4690-87b4-55b7d998223a/360"
-                alt="Как приручить дракона 3">
-            </a>
-            <div class="cards-view__buttons">
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">25</span>
-              </div>
-              <div>
-                <button class="cards-view__button" type="button">
-                  <svg class="svg-transform" width="20" height="20">
-                    <use xlink:href="#like"></use>
-                  </svg>
-                </button>
-                <span class="cards-view__count">4</span>
-              </div>
-            </div>
-            <a href="#">
-              <h2 class="cards-view__title">Как приручить дракона 3</h2>
-              <small>9 сезона, 12 серий</small>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+              <a href="#">
+                <h2 class="cards-view__title">Как приручить дракона 3</h2>
+                <small>9 сезона, 12 серий</small>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
   </main>
 </body>
