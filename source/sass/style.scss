@@ -246,6 +246,7 @@
 
 .side-menu {
   box-sizing: border-box;
+  padding-top: 5px;
   // position: fixed;
   // z-index: 100;
   // top: 0;
@@ -276,7 +277,13 @@
   margin-top: 6px;
   padding: 0;
   padding-left: 6px;
-  list-style: none;
+  list-style: none;  
+  opacity: 0;
+
+  height: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: opacity 0.17s linear, transform 0.17s linear;
   li {
     &:not(:last-of-type) {
       margin-bottom: 4px;
@@ -301,6 +308,15 @@
   font-family: inherit;
   font-size: 18px;
   color: #ffffff;
+  cursor: pointer;
+  &::before {    
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 2px;
+    height: 22px;
+    background-color: #fe0100;
+  }
   span {
     margin-right: 6px;
   }
@@ -309,15 +325,18 @@
     vertical-align: bottom;
   }
   &.active {
+    & + .side-menu__items {
+      height: auto;
+      opacity: 1;
+      transform: scaleY(1);
+      transform-origin: top;
+      transition: opacity 0.17s linear, transform 0.17s linear;      
+    }
+  }
+  &.active-page {
     position: relative;
     &::before {
       content: '';
-      position: absolute;
-      top: 0;
-      left: -9px;
-      width: 2px;
-      height: 22px;
-      background-color: #fe0100;
     }
   }
 }
