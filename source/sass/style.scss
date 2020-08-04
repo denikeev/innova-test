@@ -75,18 +75,18 @@
     font-size: 14px;
     color: #727473;
   }
-}
-
-.cards-view__link {
-  position: relative;
-  display: block;
-  margin-bottom: 12px;
   &:hover {
-    .cards-view__info,
-    + .cards-view__actions button  {
+    .cards-view__overlay,
+    .cards-view__action  {
       opacity: 1;
     }
   }
+}
+
+.cards-view__thumbnail {
+  position: relative;
+  display: block;
+  margin-bottom: 12px;
 }
 
 .cards-view__img {
@@ -96,7 +96,7 @@
   border-radius: 6px;
 }
 
-.cards-view__info {
+.cards-view__overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -137,75 +137,68 @@
   }
 }
 
-.cards-view__actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: auto;
-  button {
-    padding: 6px;
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.2s linear;
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
 
-.cards-view__defer {
-  position: absolute;
-  top: 16px;
-  left: 10px;
+.cards-view__action {
+  padding: 6px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s linear;
   &:hover {
-    svg {
-      opacity: 1;    
-    }
+    opacity: 1;
   }
-  svg {    
-    opacity: 0.2;
-    transition: opacity 0.1s linear;
-  }
-}
-
-.cards-view__favorites {
-  position: absolute;
-  top: 16px;
-  left: 42px;
-  &:hover {
-    svg {
-      opacity: 1;
-      fill: red;
-    }
-  }
-  svg {
-    fill: white;
-    opacity: 0.2;
-    transition: all 0.1s linear;
-  }
-}
-
-.cards-view__delete-favorites {
-  position: absolute;
-  top: 16px;
-  right: 10px;
-  display: none;
-  &::before {
-    box-sizing: border-box;
-    z-index: 1;
-    content: 'Удалить из избранного';
+  &_defer {
     position: absolute;
-    top: -28px;
-    left: -63px;
-    width: 155px;
-    height: 24px;
-    padding: 4px 0;
-    background-color: #666666;
-    font-size: 13px;
-    line-height: 1;
-    color: #d4e4e3;
+    top: 16px;
+    left: 10px;
+    user-select: none;
+    &:hover {
+      svg {
+        opacity: 1;    
+      }
+    }
+    svg {        
+      opacity: 0.2;
+      transition: opacity 0.1s linear;
+    }
+  }
+  &_favorites {
+    position: absolute;
+    top: 16px;
+    left: 42px;
+    &:hover {
+      svg {
+        opacity: 1;
+        fill: red;
+      }
+    }
+    svg {
+      fill: white;
+      opacity: 0.2;
+      transition: all 0.1s linear;
+    }
+  }
+  &_delete {
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    display: none;
+    &::before {
+      box-sizing: border-box;
+      z-index: 1;
+      content: 'Удалить из избранного';
+      position: absolute;
+      top: -28px;
+      left: -63px;
+      width: 155px;
+      height: 24px;
+      padding: 4px 0;
+      background-color: #666666;
+      font-size: 13px;
+      line-height: 1;
+      color: #d4e4e3;
+    }
   }
 }
 

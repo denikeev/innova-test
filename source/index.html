@@ -68,34 +68,32 @@
       <h1>Избранное</h1>
       <ul class="cards-view__list">
         <li class="cards-view__item">
-          <a class="cards-view__link" href="#">
+          <div class="cards-view__thumbnail">
             <img class="cards-view__img"
               src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/360"
               alt="13 причин почему">
-            <div class="cards-view__info">
+            <a href="#" class="cards-view__overlay">
               <div class="cards-view__play"></div>
               <div class="cards-view__rating">
                 <span>КП 7.5</span>
                 <span>IMDb: 7.7</span>
               </div>
-            </div>
-          </a>
-          <div class="cards-view__actions">
-            <button class="cards-view__defer" type="button">
-              <svg width="20" height="20">
-                <use xlink:href="#clock"></use>
-              </svg>
-            </button>
-            <button class="cards-view__favorites" type="button">
-              <svg width="20" height="20">
-                <use xlink:href="#favorites"></use>
-              </svg>
-            </button>
-            <button class="cards-view__delete-favorites" type="button">
-              <svg width="20" height="20">
-                <use xlink:href="#close"></use>
-              </svg>
-            </button>
+          </div>
+          <button class="cards-view__action cards-view__action_defer" type="button">
+            <svg width="20" height="20">
+              <use xlink:href="#clock"></use>
+            </svg>
+          </button>
+          <button class="cards-view__action cards-view__action_favorites" type="button">
+            <svg width="20" height="20">
+              <use xlink:href="#favorites"></use>
+            </svg>
+          </button>
+          <button class="cards-view__action cards-view__action_delete" type="button">
+            <svg width="20" height="20">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
           </div>
           <div class="cards-view__buttons">
             <div>
@@ -133,23 +131,6 @@
               </div>
             </div>
           </a>
-          <div class="cards-view__actions">
-            <button class="cards-view__defer" type="button">
-              <svg width="20" height="20">
-                <use xlink:href="#clock"></use>
-              </svg>
-            </button>
-            <button class="cards-view__favorites" type="button">
-              <svg width="20" height="20">
-                <use xlink:href="#favorites"></use>
-              </svg>
-            </button>
-            <button class="cards-view__delete-favorites" type="button">
-              <svg width="20" height="20">
-                <use xlink:href="#close"></use>
-              </svg>
-            </button>
-          </div>
           <div class="cards-view__buttons">
             <div>
               <button class="cards-view__button" type="button">
